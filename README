@@ -1,0 +1,13 @@
+check_snmp_int.pl for use with Embedded Perl, including options to access an OID.
+
+check_snmp_int.pl was shifted around (my $self=shift;) a bit to enable using it 
+whith embedded perl.
+
+The check_snmp_int.pl is based on the version mentioned in this thread:
+http://www.nagios-portal.org/wbb/index.php?page=Thread&threadID=19241
+having the -T and -I options to directly access an OID, e.g. when using an
+Allied Telesys switch, where the description table contains only the
+switchmodel's name and number, and no Portnumber.
+
+See 'check_snmp_int.pl -h' , 'check_snmp_int.pl -v [cmd]' and the homepage of
+the original: http://nagios.manubulon.com/snmp_int.html .
