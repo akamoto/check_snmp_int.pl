@@ -352,7 +352,11 @@ sub new {
 
         # Make the bandwith & error checks if necessary
         if( defined( $self->{o_checkperf} ) && $int_status == 1 ) {
-            $temp_file_name = $descr[$i];
+            if ( defined( $self->{o_index} ) ){
+                $temp_file_name = $self->{o_index};
+            } else {
+                $temp_file_name = $descr[$i];
+            }
             $temp_file_name =~ s/[ ;\/]/_/g;
             $temp_file_name = $self->{o_base_dir} . $self->{o_host} . "." . $temp_file_name;
 
