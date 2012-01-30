@@ -27,7 +27,7 @@ use warnings;
 use strict;
 use Net::SNMP qw(oid_lex_sort);
 use Getopt::Long;
-use lib "/omd/sites/it/lib/nagios/plugins";
+use lib "/etc/alternatives/omd";
 use utils qw(%ERRORS $TIMEOUT);
 
 sub new {
